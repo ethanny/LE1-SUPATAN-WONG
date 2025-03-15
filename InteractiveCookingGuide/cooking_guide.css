@@ -1,0 +1,260 @@
+/* Base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  h1 {
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  header p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Recipe slideshow container */
+  .recipe-slideshow {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  /* Individual recipe steps */
+  .recipe-step {
+    display: none; /* Hide all steps by default */
+    padding: 20px;
+    width: 100%;
+  }
+  
+  /* Make the first step visible by default */
+  #step1 {
+    display: block;
+  }
+  
+  /* When a step is targeted, show it */
+  .recipe-step:target {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* When a step becomes the target, hide the default first step */
+  .recipe-step:target ~ #step1 {
+    display: none;
+  }
+  
+  /* Step content styling */
+  figure {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  figure img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .step-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: #333;
+  }
+  
+  .step-description {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+  }
+  
+  .step-description p {
+    color: #555;
+    line-height: 1.8;
+  }
+  
+  /* Navigation controls for steps */
+  .step-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+  }
+  
+  .prev-step,
+  .next-step {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .prev-step:hover,
+  .next-step:hover,
+  .prev-step:focus,
+  .next-step:focus {
+    background-color: rgba(0, 0, 0, 0.8);
+    outline: none;
+  }
+  
+  /* Step indicators */
+  .step-indicators {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .indicator {
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .indicator:hover,
+  .indicator:focus {
+    background-color: #888;
+    outline: none;
+  }
+  
+  /* Change indicator color based on which step is active */
+  .indicator[aria-current="true"],
+  #step1:target ~ .step-indicators a[href="#step1"],
+  #step2:target ~ .step-indicators a[href="#step2"],
+  #step3:target ~ .step-indicators a[href="#step3"],
+  #step4:target ~ .step-indicators a[href="#step4"],
+  #step5:target ~ .step-indicators a[href="#step5"] {
+    background-color: #333;
+  }
+  
+  /* Update ARIA attributes when a step becomes the target */
+  .recipe-step {
+    aria-hidden: true;
+  }
+  
+  #step1 {
+    aria-hidden: false;
+  }
+  
+  #step1:target,
+  #step2:target,
+  #step3:target,
+  #step4:target,
+  #step5:target {
+    aria-hidden: false;
+  }
+  
+  /* Accessibility focus styles */
+  .recipe-step:focus {
+    outline: 2px dashed #333;
+    outline-offset: -5px;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    body {
+      padding: 10px;
+    }
+    
+    .recipe-step {
+      padding: 15px;
+    }
+    
+    .step-number {
+      font-size: 1.2rem;
+    }
+    
+    figure img {
+      max-height: 250px;
+    }
+    
+    .prev-step, .next-step {
+      padding: 8px 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header p {
+      font-size: 0.9rem;
+    }
+    
+    .recipe-step {
+      padding: 10px;
+    }
+    
+    figure img {
+      max-height: 200px;
+    }
+    
+    .step-description {
+      padding: 10px;
+    }
+    
+    .step-controls {
+      margin-top: 1rem;
+    }
+    
+    .prev-step, .next-step {
+      padding: 6px 10px;
+      font-size: 0.9rem;
+    }
+    
+    .indicator {
+      width: 10px;
+      height: 10px;
+      margin: 0 4px;
+    }
+  }

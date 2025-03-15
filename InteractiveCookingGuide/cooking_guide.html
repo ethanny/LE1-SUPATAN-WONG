@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS-Only Slideshow</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f4f4f4;
+        flex-direction: column;
+      }
+      .slideshow {
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 500px;
+        border-radius: 0px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      .slides {
+        display: flex;
+        width: 500%; /* 5 slides, each taking 100% */
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slide {
+        flex: 0 0 100%; /* Each slide takes full width */
+        text-align: center;
+      }
+
+      .slide img {
+        width: 100%;
+        height: 50%;
+        object-fit: cover; /* Ensure the image covers its space properly */
+      }
+      .step-number {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+      .step-description {
+        font-size: 1rem;
+        color: #555;
+      }
+      .buttons {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+      }
+      .buttons button {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 5px;
+      }
+      .indicators {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+      }
+      .dot {
+        width: 10px;
+        height: 10px;
+        margin: 5px;
+        background-color: gray;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .active {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Easy Bulgogi (Korean BBQ Beef)</h1>
+      <p>
+        Bulgogi, or Korean barbecued beef, is made with marinated sliced beef.
+        Most recipes call for crushed pear to tenderize the meat. My boyfriend's
+        Korean mother says Coca-Cola can also be used for the same purpose. This
+        recipe uses very thinly-sliced sirloin steak, so tenderization isn't
+        necessary. It's delicious served with rice, lettuce leaves, and chile
+        paste or kimchi.
+      </p>
+    </header>
+    <section class="slideshow">
+      <section class="slides">
+        <figure class="slide">
+          <img
+            src="https://via.placeholder.com/400x250/FF5733/fff?text=Step+1"
+            alt="Step 1"
+          />
+          <figcaption class="step-number">Step 1</figcaption>
+          <p class="step-description">Description for Step 1</p>
+        </figure>
+        <figure class="slide">
+          <img
+            src="https://via.placeholder.com/400x250/33FF57/fff?text=Step+2"
+            alt="Step 2"
+          />
+          <figcaption class="step-number">Step 2</figcaption>
+          <p class="step-description">Description for Step 2</p>
+        </figure>
+        <figure class="slide">
+          <img
+            src="https://via.placeholder.com/400x250/3357FF/fff?text=Step+3"
+            alt="Step 3"
+          />
+          <figcaption class="step-number">Step 3</figcaption>
+          <p class="step-description">Description for Step 3</p>
+        </figure>
+        <figure class="slide">
+          <img
+            src="https://via.placeholder.com/400x250/FF33A1/fff?text=Step+4"
+            alt="Step 4"
+          />
+          <figcaption class="step-number">Step 4</figcaption>
+          <p class="step-description">Description for Step 4</p>
+        </figure>
+        <figure class="slide">
+          <img
+            src="https://via.placeholder.com/400x250/FFA533/fff?text=Step+5"
+            alt="Step 5"
+          />
+          <figcaption class="step-number">Step 5</figcaption>
+          <p class="step-description">Description for Step 5</p>
+        </figure>
+      </section>
+      <nav class="buttons">
+        <button onclick="prevSlide()">&#10094;</button>
+        <button onclick="nextSlide()">&#10095;</button>
+      </nav>
+    </section>
+    <nav class="indicators">
+      <span class="dot" onclick="currentSlide(0)"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </nav>
+    <script>
+      let currentIndex = 0;
+      const slides = document.querySelector(".slides");
+      const dots = document.querySelectorAll(".dot");
+
+      function updateSlide() {
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        dots.forEach((dot, index) => {
+          dot.classList.toggle("active", index === currentIndex);
+        });
+      }
+
+      function prevSlide() {
+        currentIndex = currentIndex > 0 ? currentIndex - 1 : dots.length - 1;
+        updateSlide();
+      }
+
+      function nextSlide() {
+        currentIndex = currentIndex < dots.length - 1 ? currentIndex + 1 : 0;
+        updateSlide();
+      }
+
+      function currentSlide(index) {
+        currentIndex = index;
+        updateSlide();
+      }
+
+      updateSlide();
+    </script>
+  </body>
+</html>
