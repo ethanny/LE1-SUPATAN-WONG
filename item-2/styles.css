@@ -157,9 +157,9 @@ gap: 5px;
     background-color: #f6f6f6;
     border: 1px solid #7f7f7f;
     border-radius: 5px;
-    padding: 5px 3px;
+    padding: 10px 10px;
     max-width: 600px;
-    height: 100%;
+    height: auto%;
   }
   
 .content {
@@ -169,9 +169,15 @@ gap: 5px;
     flex-direction: column;
 }
 
+.content-title {
+    margin-bottom: 15px;
+}
+
 .content h4 {
     color: #462c77;
     font-size: 2vh;
+    margin: 0;
+    display: inline-block;
 }
 
 .content .link-tag{
@@ -188,10 +194,10 @@ gap: 5px;
     color: #9d9d9d;
     overflow-wrap: break-word;
     max-width: 100%;
-    display: inline-block;
+    display: block;
+    margin: 5px 0 0 0;
 }
   
-
 .pointer {
     position: absolute;
     width: 20px;
@@ -204,38 +210,37 @@ gap: 5px;
     transform: rotate(45deg);
 }
 
-.vote-container {
-    display: flex;
-    align-items: center;
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    padding: 8px 10px;
-    margin-top: 5px;
-}
-
 .post-stats-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    padding: 5px;
+    flex-wrap: wrap;
     width: 100%;
-    }
+    justify-content: space-between;
+    padding: 0;
+}
 
 .vote-container {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    padding: 3px;
     margin: 0;
+    position: relative;
+    width: 300px;
+    width: auto;
 }
+
   
 .score-container {
     display: flex;
     align-items: baseline;
     color: #666;
+    margin-bottom: 5px;
 }
   
 .score {
+    display: flex;
+    align-items: flex-start;
     font-size: 24px;
     font-weight: bold;
     color: #9a9a9a;
@@ -254,7 +259,12 @@ gap: 5px;
 }
 
 .votes-container {
-    text-align: left;    
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-wrap: ;
+    flex-direction: column;
+    align-items: flex-start; 
     margin-left: 8px;
 }
 
@@ -270,8 +280,9 @@ gap: 5px;
 }
 
 .metadata-container {
-    text-align: right;
-    vertical-align: baseline;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
     color: #888;
     font-size: 12px;
 }
