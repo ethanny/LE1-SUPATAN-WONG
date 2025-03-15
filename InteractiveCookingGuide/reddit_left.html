@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Arial, sans-serif;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: 100%; /* Fill the entire viewport height */
+        border: 1.25px solid gray;
+        border-left: none;
+        border-bottom: none;
+        background-color: #eff9ff;
+        overflow: auto; /* Add scrolling if content overflows */
+        box-sizing: border-box;
+        position: fixed; /* Keep sidebar fixed when scrolling */
+      }
+
+      .sidebar-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+
+      .category {
+        font-size: 10px;
+        padding: 5px 20px;
+        color: #515455
+        ;
+        display: block;
+        text-decoration: none;
+      }
+
+      .category.selected {
+        color: #ff4500;
+        background-color: white;
+        font-weight: bold;
+        border: 1px solid gray;
+        border-left: none;
+        border-right: none;
+      }
+      
+      .category_icon {
+        margin-right: 5px;
+    }
+
+      .category:hover {
+        background-color: white;
+      }
+
+      .sidebar-box {
+        background-color: #DCEDFF;
+        padding: 10px 20px;
+        margin-top: 15px;
+        margin-right: 20px;
+        border: 1px solid #ccc;
+        font-size: 10px;
+      }
+
+      .sidebar-box h3 {
+        margin: 0;
+        padding: 0 0 5px 0;
+        font-size: 12px;
+        font-weight: normal;
+        color: #1E5BAD;
+      }
+
+      .sidebar-box p {
+        margin: 0px;
+        color: gray;
+      }
+
+      .more-link {
+        color: #1E5BAD;        
+        text-align: start;
+        padding: 5px 20px;
+        display: block;
+        font-size: 10px;
+      }
+
+      .tiny-ad {
+        margin-top: 15px;
+        margin-right: 20px;
+        
+        color: #888;
+      }
+
+      .tiny-ad h4 {
+        margin-top: 5px;
+        text-align: end;
+        font-size: 10px;
+        color: #888;
+      }
+
+      .tiny-ad img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+    </style>
+  </head>
+  
+  <body>
+    <aside class="sidebar">
+      <section class="sidebar-section">
+        <a href="#" class="category">
+            <span class="category_icon">📝</span> FRONT PAGE
+        </a>
+        <a href="#" class="category">
+          <span class="category_icon">📁</span> PICS
+        </a>
+        <a href="#" class="category">
+            <span class="category_icon">🧪</span> SCIENCE
+        </a>
+        <a href="#" class="category">
+          <span class="category_icon">🌐</span> TECHNOLOGY
+        </a>
+        <a href="#" class="category">
+            <span class="category_icon">📁</span> ASK REDDIT
+        </a>
+        <a href="#" class="category">
+            <span class="category_icon">📁</span> FUNNY
+        </a>
+        <a href="#" class="category">
+            <span class="category_icon">📁</span> WTF
+        </a>
+        <a href="#" class="category selected">
+            <span class="category_icon">📁</span> IAMA
+        </a>
+        <a href="#" class="category">
+            <span class="category_icon">📁</span> WORLD NEWS
+        </a>
+        <a href="#" class="category">
+            <span class="category_icon">📁</span> TODAYILEARNED
+        </a>
+        <a href="#" class="category">
+            <span class="category_icon">📁</span> WORLDNEWS
+        </a>
+        <a href="#" class="category">
+            <span class="category_icon">📁</span> WEBDESIGN
+        </a>
+        <a href="#" class="category">
+            <span class="category_icon">📁</span> ATHEIST
+        </a>
+        <a href="#" class="category">
+            <span class="category_icon">📁</span> FFFFFFFUUUUUUUUUUUU
+        </a>
+
+        <a href="#" class="more-link">(MORE)</a>
+      </div>
+
+      <div class="sidebar-box">
+        <h3>Submit a link</h3>
+        <p>
+          to anything interesting: news article, blog entry, video, picture...
+        </p>
+      </div>
+
+      <section class="sidebar-box">
+        <h3>Create Community</h3>
+        <p>...for your LARPing community</p>
+        <p>...because nothing in life is free (except reddits!)</p>
+        <p>here on the side</p>
+      </section>
+
+      <section class="tiny-ad">
+        <img
+          src="images/ad.png"
+          alt="Little Big Planet Sackboy figures"
+        />
+        <h4>tiniest ad in the world</h4>
+      </section>
+    </aside>
+  </body>
+</html>

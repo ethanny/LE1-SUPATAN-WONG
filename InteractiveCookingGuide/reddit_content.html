@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Two HTML Pages in One</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 4fr 4fr; /* Left takes 1/5, right takes 4/5 */
+        height: 100vh; /* Ensure full height */
+      }
+
+      iframe {
+        border: none;
+        width: 100%; /* Ensure iframes take full width of their grid cells */
+        height: 100vh;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <iframe src="reddit_left.html"></iframe>
+      <iframe src="reddit_center.html"></iframe>
+      <iframe src="reddit_center.html"></iframe>
+    </div>
+  </body>
+</html>
