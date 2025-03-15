@@ -162,7 +162,6 @@ header {
     position: relative;
     background-color: #f6f6f6;
     border: 1px solid #7f7f7f;
-    border-radius: 5px;
     padding: 10px 10px;
     max-width: 600px;
     height: auto;
@@ -196,7 +195,7 @@ header {
 
 .content .link-desc {
     font-weight: 300;
-    font-size: 1.7vh;
+    font-size: 10px;
     color: #9d9d9d;
     overflow-wrap: break-word;
     max-width: 100%;

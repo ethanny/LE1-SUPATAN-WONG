@@ -1,16 +1,23 @@
 body {
     font-family: Verdana, Arial, sans-serif;
     margin: 0;
-    padding: 10px;
     font-size: 10px;
-    display: flex;
-    direction: column;
   }
 
   p {
     margin: 0;
     padding: 0;
   }
+
+  .thread-dialogue-bubble {
+    position: relative;
+    background-color: #f6f6f6;
+    border: 1px solid #7f7f7f;
+    border-radius: 5px;
+    padding: 10px 10px;
+    max-width: 600px;
+    height: auto;
+}
 
   .thread-margin {
     margin-left: 16px;
@@ -19,7 +26,9 @@ body {
   .thread {
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 5px;
+    margin-left: 10px;
   }
 
   .thread-parent {
@@ -136,4 +145,10 @@ body {
     width: 1px;
     height: auto;
     background-color: #c6c6c6;
+  }
+
+  iframe {
+    border: none;
+    width: 100vh; 
+    display: block;
   }
