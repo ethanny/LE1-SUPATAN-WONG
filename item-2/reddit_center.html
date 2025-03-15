@@ -17,19 +17,22 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+        border-top: 1px solid gray;
       }
 
       .top-nav-container {
         display: flex;
-        width: 100%;
+        flex-direction: row;
+        gap: 10px;
+        margin-left: 10px;
+        transform: translateY(1.5px);
       }
 
       .top-nav-button {
         display: inline-block;
         padding: 6px 10px;
-        margin: 0 4px;
         border: 1px solid gray;
-        border-bottom: none;
+        border-bottom: white;
         border-radius: 3px;
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
@@ -44,6 +47,11 @@
       .top-nav-button.unselected {
         background: linear-gradient(to bottom, #fff, #ebeeef);
         border-bottom: 1px solid gray;
+      }
+
+      .top-nav-button.unselected:hover {
+        color: white;
+        background: #ff8b60;
       }
 
       .hot {
@@ -97,10 +105,11 @@
         border-top: 8px solid #c6c6c6;
       }
 
-      .arrow-button.down.downvoted {
+      .arrow-button.down:hover, .arrow-button.down.downvoted {
         border-top: 8px solid #9b95d4;
       }
 
+      .arrow-button.up:hover,
       .arrow-button.up.highlighted {
         border-bottom: 8px solid #ff8b60;
       }
@@ -112,18 +121,23 @@
       }
 
       .post-number {
+        min-width: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
         color: #a6a6a6;
         font-size: 14px;
-        margin: 5px;
       }
 
       figure.thumbnail {
         margin: 0 8px 0 0;
         max-width: 70px;
         max-height: 50px;
+      }
+
+      figure.thumbnail :hover {
+        opacity: 0.5;
+        cursor: pointer;
       }
 
       figure.thumbnail img {
@@ -140,6 +154,11 @@
         font-size: 14px;
         margin: 0 0 2px 0;
         font-weight: normal;
+      }
+
+      h2.post-title:hover {
+        text-decoration: underline;
+        cursor: pointer;
       }
 
       h2.post-title a {
@@ -256,7 +275,7 @@
         </aside>
 
         <figure class="thumbnail">
-          <img src="/api/placeholder/70/70" alt="Post thumbnail" />
+          <img src="img1.png" alt="Post thumbnail" />
         </figure>
 
         <section class="post-content">
@@ -381,7 +400,7 @@
         </aside>
 
         <figure class="thumbnail">
-          <img src="/api/placeholder/70/70" alt="Post thumbnail" />
+          <img src="img2.png" alt="Post thumbnail" />
         </figure>
 
         <section class="post-content">
@@ -426,7 +445,7 @@
         </aside>
 
         <figure class="thumbnail">
-          <img src="/api/placeholder/70/70" alt="Post thumbnail" />
+          <img src="img3.png" alt="Post thumbnail" />
         </figure>
 
         <section class="post-content">
@@ -496,6 +515,303 @@
 
       <article class="post">
         <p class="post-number">7</p>
+
+        <aside class="voting">
+          <button
+            class="arrow-button up highlighted"
+            aria-label="Upvote"
+            role="button"
+          ></button>
+          <p class="hot score">103</p>
+          <button
+            class="arrow-button down"
+            aria-label="Downvote"
+            role="button"
+          ></button>
+        </aside>
+
+        <section class="post-content">
+          <h2 class="post-title">
+            <a href="#"
+              ><a
+                >What do you call 60 guys watching the Super Bowl at home?</a
+              ></a
+            >
+            <span class="post-source">(cnn.com)</span>
+          </h2>
+
+          <footer class="post-meta">
+            <span>submitted 19 hours ago by </span>
+            <a href="#" rel="author">krispykrackers</a>
+            <nav class="post-actions">
+              <a href="#" aria-label="623 comments">623 comments</a>
+              <a href="#" aria-label="Share this post">share</a>
+              <a href="#" aria-label="Save this post">save</a>
+              <a href="#" aria-label="Hide this post">hide</a>
+              <a href="#" aria-label="Report this post">report</a>
+            </nav>
+          </footer>
+        </section>
+      </article>
+
+      <article class="post">
+        <p class="post-number">8</p>
+
+        <aside class="voting">
+          <button
+            class="arrow-button up"
+            aria-label="Upvote"
+            role="button"
+          ></button>
+          <p class="score">215</p>
+          <button
+            class="arrow-button down"
+            aria-label="Downvote"
+            role="button"
+          ></button>
+        </aside>
+
+        <figure class="thumbnail">
+          <img src="img1.png" alt="Post thumbnail" />
+        </figure>
+
+        <section class="post-content">
+          <h2 class="post-title">
+            <a href="#">
+              <a>What do you call 60 guys watching the Super Bowl at home?</a>
+            </a>
+            <span class="post-source">(cnn.com)</span>
+          </h2>
+
+          <footer class="post-meta">
+            <span>submitted 19 hours ago by </span>
+            <a href="#" rel="author">krispykrackers</a>
+            <nav class="post-actions">
+              <a href="#" aria-label="623 comments">623 comments</a>
+              <a href="#" aria-label="Share this post">share</a>
+              <a href="#" aria-label="Save this post">save</a>
+              <a href="#" aria-label="Hide this post">hide</a>
+              <a href="#" aria-label="Report this post">report</a>
+            </nav>
+          </footer>
+        </section>
+      </article>
+
+      <article class="post">
+        <p class="post-number">9</p>
+
+        <aside class="voting">
+          <button
+            class="arrow-button up highlighted"
+            aria-label="Upvote"
+            role="button"
+          ></button>
+          <p class="hot score">232</p>
+          <button
+            class="arrow-button down"
+            aria-label="Downvote"
+            role="button"
+          ></button>
+        </aside>
+
+        <section class="post-content">
+          <h2 class="post-title">
+            <a href="#"
+              ><b
+                >What do you call 60 guys watching the Super Bowl at home?</b
+              ></a
+            >
+            <span class="post-source">(cnn.com)</span>
+          </h2>
+
+          <footer class="post-meta">
+            <span>submitted 19 hours ago by </span>
+            <a href="#" rel="author">krispykrackers</a>
+            <nav class="post-actions">
+              <a href="#" aria-label="623 comments">623 comments</a>
+              <a href="#" aria-label="Share this post">share</a>
+              <a href="#" aria-label="Save this post">save</a>
+              <a href="#" aria-label="Hide this post">hide</a>
+              <a href="#" aria-label="Report this post">report</a>
+            </nav>
+          </footer>
+        </section>
+      </article>
+
+      <article class="post">
+        <p class="post-number">10</p>
+
+        <aside class="voting">
+          <button
+            class="arrow-button up"
+            aria-label="Upvote"
+            role="button"
+          ></button>
+          <p class="score purple">22</p>
+          <button
+            class="arrow-button down downvoted"
+            aria-label="Downvote"
+            role="button"
+          ></button>
+        </aside>
+
+        <section class="post-content">
+          <h2 class="post-title">
+            <a href="#"
+              ><a
+                >What do you call 60 guys watching the Super Bowl at home?</a
+              ></a
+            >
+            <span class="post-source">(cnn.com)</span>
+          </h2>
+
+          <footer class="post-meta">
+            <span>submitted 19 hours ago by </span>
+            <a href="#" rel="author">krispykrackers</a>
+            <nav class="post-actions">
+              <a href="#" aria-label="623 comments">623 comments</a>
+              <a href="#" aria-label="Share this post">share</a>
+              <a href="#" aria-label="Save this post">save</a>
+              <a href="#" aria-label="Hide this post">hide</a>
+              <a href="#" aria-label="Report this post">report</a>
+            </nav>
+          </footer>
+        </section>
+      </article>
+
+      <article class="post">
+        <p class="post-number">11</p>
+
+        <aside class="voting">
+          <button
+            class="arrow-button up"
+            aria-label="Upvote"
+            role="button"
+          ></button>
+          <p class="score">215</p>
+          <button
+            class="arrow-button down"
+            aria-label="Downvote"
+            role="button"
+          ></button>
+        </aside>
+
+        <figure class="thumbnail">
+          <img src="img2.png" alt="Post thumbnail" />
+        </figure>
+
+        <section class="post-content">
+          <h2 class="post-title">
+            <a href="#"
+              ><a
+                >What do you call 60 guys watching the Super Bowl at home?</a
+              ></a
+            >
+            <span class="post-source">(cnn.com)</span>
+          </h2>
+
+          <footer class="post-meta">
+            <span>submitted 19 hours ago by </span>
+            <a href="#" rel="author">krispykrackers</a>
+            <nav class="post-actions">
+              <a href="#" aria-label="623 comments">623 comments</a>
+              <a href="#" aria-label="Share this post">share</a>
+              <a href="#" aria-label="Save this post">save</a>
+              <a href="#" aria-label="Hide this post">hide</a>
+              <a href="#" aria-label="Report this post">report</a>
+            </nav>
+          </footer>
+        </section>
+      </article>
+
+      <article class="post">
+        <p class="post-number">12</p>
+
+        <aside class="voting">
+          <button
+            class="arrow-button up"
+            aria-label="Upvote"
+            role="button"
+          ></button>
+          <p class="score">9215</p>
+          <button
+            class="arrow-button down"
+            aria-label="Downvote"
+            role="button"
+          ></button>
+        </aside>
+
+        <figure class="thumbnail">
+          <img src="img3.png" alt="Post thumbnail" />
+        </figure>
+
+        <section class="post-content">
+          <h2 class="post-title">
+            <a href="#"
+              ><a
+                >What do you call 60 guys watching the Super Bowl at home?</a
+              ></a
+            >
+            <span class="post-source">(cnn.com)</span>
+          </h2>
+
+          <footer class="post-meta">
+            <span>submitted 19 hours ago by </span>
+            <a href="#" rel="author">krispykrackers</a>
+            <nav class="post-actions">
+              <a href="#" aria-label="623 comments">623 comments</a>
+              <a href="#" aria-label="Share this post">share</a>
+              <a href="#" aria-label="Save this post">save</a>
+              <a href="#" aria-label="Hide this post">hide</a>
+              <a href="#" aria-label="Report this post">report</a>
+            </nav>
+          </footer>
+        </section>
+      </article>
+
+      <article class="post">
+        <p class="post-number">13</p>
+
+        <aside class="voting">
+          <button
+            class="arrow-button up"
+            aria-label="Upvote"
+            role="button"
+          ></button>
+          <p class="score">215</p>
+          <button
+            class="arrow-button down"
+            aria-label="Downvote"
+            role="button"
+          ></button>
+        </aside>
+
+        <section class="post-content">
+          <h2 class="post-title">
+            <a href="#"
+              ><a
+                >What do you call 60 guys watching the Super Bowl at home?</a
+              ></a
+            >
+            <span class="post-source">(cnn.com)</span>
+          </h2>
+
+          <footer class="post-meta">
+            <span>submitted 19 hours ago by </span>
+            <a href="#" rel="author">krispykrackers</a>
+            <nav class="post-actions">
+              <a href="#" aria-label="623 comments">623 comments</a>
+              <a href="#" aria-label="Share this post">share</a>
+              <a href="#" aria-label="Save this post">save</a>
+              <a href="#" aria-label="Hide this post">hide</a>
+              <a href="#" aria-label="Report this post">report</a>
+            </nav>
+          </footer>
+        </section>
+      </article>
+
+      <article class="post">
+        <p class="post-number">14</p>
 
         <aside class="voting">
           <button
