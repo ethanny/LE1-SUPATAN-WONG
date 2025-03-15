@@ -1,0 +1,138 @@
+
+header {
+    background-color: #dcedff;
+    border-bottom: 1px solid #5f99cf;
+    padding: 5px 10px;
+    height: 30px;
+    position: relative;
+}
+
+.navbar {
+    background: #cee3f8;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 2px solid #a0bcd6;
+}
+
+.header-img img{
+    height: 100%;
+    margin-right: 10px;
+    width: auto;
+}
+
+.user-info {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+    border-bottom: none;
+    background-color: #f2f4f5;
+  }
+
+.nav-section {
+    position: absolute;
+    background-color: #f2f4f5;
+    height: 70px;
+    right: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    width: 200px; /* Adjust width as needed */
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 3px;
+    padding: 2px;
+    position: relative;
+    margin-right: 4px;
+}
+
+.search-input {
+    flex-grow: 1;
+    height: 24px;
+    border: none;
+    padding: 2px 5px;
+    font-size: 10px;
+    outline: none;
+    background-color: white;
+}
+
+.search-button {
+    width: 28px;
+    height: 28px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-size: 20px 20px;
+    background-color: #f8f8f8;
+    border-left: 1px solid black;
+    cursor: pointer;
+    text-align: center;
+    text-justify: center;
+}
+
+.search-button:hover {
+    background-color: #e0e0e0;
+}
+
+.user-text {
+    display: block;
+    font-size: 11px;
+    color: #336699;
+    margin-bottom: 5px;
+}
+
+.user-text a {
+    color: #336699;
+    text-decoration: none;
+  }
+  
+.user-text a:hover {
+text-decoration: underline;
+}
+
+.user-link {
+font-weight: bold;
+}
+
+.user-buttons {
+display: flex;
+justify-content: flex-end;
+gap: 5px;
+}
+
+.mail-button, .karma-button, .comment-button {
+display: inline-block;
+background-color: #f0f0f0;
+border: 1px solid #c3c3c3;
+border-radius: 3px;
+font-size: 14px;
+padding: 0 4px;
+height: 28px;
+line-height: 18px;
+text-decoration: none;
+font-weight: bold;
+color: #336699;
+}
+
+.mail-button {
+background-color: #ff9900;
+color: white;
+}
+
+.mail-button img {
+    justify-items: center;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+
+
