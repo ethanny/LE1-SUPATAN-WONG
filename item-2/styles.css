@@ -20,7 +20,7 @@ header {
     border-bottom: 2px solid #a0bcd6;
 }
 
-.header-img img{
+.header-img img {
     height: 100%;
     margin-right: 10px;
     width: auto;
@@ -36,23 +36,27 @@ header {
     border-style: solid;
     border-color: black;
     border-bottom: none;
-    background-color: #f2f4f5; 
-  }
+    background-color: #edeef0;
+}
 
 
 .user-section {
-    background-color: #f2f4f5;
+    background-color: #edeef0;
     height: 70px;
     padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     align-items: flex-start;
-    justify-content: flex-end; 
-}
-.user-section > * {  
-    margin-right: 20px; 
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
 }
 
-.user-section > *:last-child {
+.user-section>* {
+    margin-right: 20px;
+}
+
+.user-section>*:last-child {
     margin-right: 0;
 }
 
@@ -60,7 +64,8 @@ header {
 .search-form {
     display: flex;
     align-items: center;
-    width: 200px; /* Adjust width as needed */
+    width: 200px;
+    /* Adjust width as needed */
     border: 1px solid black;
     background-color: white;
     border-radius: 3px;
@@ -107,29 +112,33 @@ header {
 .user-text a {
     color: #336699;
     text-decoration: none;
-  }
-  
+}
+
 .user-text a:hover {
-text-decoration: underline;
+    text-decoration: underline;
 }
 
 .user-link {
-font-weight: bold;
+    font-weight: bold;
 }
 
 .user-buttons {
-display: flex;
-justify-content: flex-end;
-gap: 5px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
 }
 
-.comment-button:hover, .mail-button:hover, .karma-button:hover{
+.comment-button:hover,
+.mail-button:hover,
+.karma-button:hover {
     background-color: #ff9900;
     color: white;
 }
 
-.mail-button, .karma-button, .comment-button {
-        
+.mail-button,
+.karma-button,
+.comment-button {
+
     display: inline-block;
     background-color: #f0f0f0;
     border: 1px solid #c3c3c3;
@@ -143,13 +152,162 @@ gap: 5px;
     color: #336699;
 }
 
-
-
 .mail-button img {
     justify-items: center;
     vertical-align: middle;
-    margin-right: 3px;
+    margin-right: 2px;
+}
+
+.thread-dialogue-bubble {
+    position: relative;
+    background-color: #f6f6f6;
+    border: 1px solid #7f7f7f;
+    border-radius: 5px;
+    padding: 10px 10px;
+    max-width: 600px;
+    height: auto;
+}
+
+.content {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-title {
+    margin-bottom: 15px;
+}
+
+.content h4 {
+    color: #462c77;
+    font-size: 2vh;
+    margin: 0;
+    display: inline-block;
+}
+
+.content .link-tag {
+    font-size: 1.5vh;
+    color: #b5b5b5;
+    font-style: normal;
+    font-weight: 50;
+    margin-left: 6px;
+}
+
+.content .link-desc {
+    font-weight: 300;
+    font-size: 1.7vh;
+    color: #9d9d9d;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    display: block;
+    margin: 5px 0 0 0;
+}
+
+.pointer {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #f6f6f6;
+    border-right: 1px solid #7f7f7f;
+    border-bottom: 1px solid #7f7f7f;
+    bottom: -11px;
+    right: 15px;
+    transform: rotate(45deg);
+}
+
+.post-stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.vote-container {
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    padding: 3px;
+    margin: 0;
+    position: relative;
+    width: 300px;
+    width: auto;
 }
 
 
+.score-container {
+    display: flex;
+    align-items: baseline;
+    color: #666;
+    margin-bottom: 5px;
+}
 
+.score {
+    display: flex;
+    align-items: flex-start;
+    font-size: 24px;
+    font-weight: bold;
+    color: #9a9a9a;
+    margin-right: 5px;
+}
+
+.points {
+    font-size: 14px;
+    margin-right: 5px;
+
+}
+
+.percentage {
+    font-size: 13px;
+    color: #9a9a9a;
+}
+
+.votes-container {
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 8px;
+}
+
+.upvotes {
+    color: #eb0d0d;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+.downvotes {
+    color: #3368b4;
+    font-size: 13px;
+}
+
+.metadata-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    color: #888;
+    font-size: 12px;
+}
+
+.submission-date {
+    margin-bottom: 2px;
+}
+
+.comments-sort {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.comments {
+    color: #336699;
+    font-weight: bold;
+}
+
+.sort-by {
+    color: #888;
+    font-weight: bold;
+}
