@@ -14,6 +14,7 @@ header {
 
 body {
     overflow: hidden;
+    background-color: #f6f6f6;
 }
 
 
@@ -33,19 +34,19 @@ body {
     border-style: solid;
     border-color: black;
     border-bottom: none;
-    background-color: #edeef0;
+    background-color: #f6f6f6;
 }
 
 
 .user-section {
-    background-color: #edeef0;
+    background-color: #f6f6f6;
     height: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
     align-items: flex-start;
     justify-content: right;
-    width: 100%;
+    width: 97.8%;
     height: 100%;
 }
 
@@ -137,7 +138,7 @@ body {
 .comment-button {
 
     display: inline-block;
-    background-color: #f0f0f0;
+    background-color: white;
     border: 1px solid #c3c3c3;
     border-radius: 3px;
     font-size: 10px;
@@ -147,7 +148,7 @@ body {
     height: 14px;
     text-decoration: none;
     font-weight: bold;
-    color: #336699;
+    color: gray;
 }
 
 .mail-button img {
@@ -165,7 +166,8 @@ body {
 .container {
     display: grid;
     grid-template-columns: .75fr 2.5fr 2fr;
-    height: 90vh;
+    height: 100vh;
+    transform: translateY(-29px);
 }
 
 iframe {

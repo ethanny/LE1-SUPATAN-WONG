@@ -3,12 +3,12 @@
     position: relative;
     background-color: #f6f6f6;
     border: 1px solid #7f7f7f;
+    border-left: none;
     padding: 5px 5px;
     max-width: auto;
     height: auto;
     
 }
-
 .content {
     padding-left: 5px;
     padding-right: 5px;
