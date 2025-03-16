@@ -1,203 +1,178 @@
+body {
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px 20px;
+  gap: 20px;
+}
 
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
-      body {
-        flex-direction: column;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        line-height: 1.6;
-        color: #333;
-        background-color: #f5f5f5;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 20px;
-      }
+.blue {
+  color: #3498db;
+}
 
-      .carousel-container {
-        width: 100%;
-        position: relative;
-        background-color: white;
-        border-radius: 12px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-      }
+.recipe-slide {
+  display: none;
+  max-width: 80vh;
+  position: relative;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
 
-      /* Hide all slides by default */
-      .slide {
-        display: none;
-        padding: 30px;
-        text-align: center;
-      }
+.recipe-slide img {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 3/1;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 10px;
+}
 
-      /* Show the targeted slide */
-      .slide:target {
-        display: block;
-      }
+.recipe-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
 
-      /* Show the first slide when no slide is targeted */
-      #step1:not(:target):not(:focus-within)
-        ~ #step2:not(:target):not(:focus-within)
-        ~ #step3:not(:target):not(:focus-within)
-        ~ #step4:not(:target):not(:focus-within)
-        ~ #step5:not(:target):not(:focus-within) {
-        display: block;
-      }
+.recipe-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+}
 
-      .slide-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+.step-number {
+  width: 100%;
+  background-color: #3498db;
+  color: white;
+  display: flex;
+  border-radius: 10px 10px 0px 0px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 20px;
+}
 
-      .step-number {
-        background-color: #3498db;
-        color: white;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-bottom: 15px;
-      }
+.button-view {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+}
 
-      .slide-image {
-        max-width: 500px;
-        height: 250px;
-        background-color: #eaeaea;
-        border-radius: 8px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 20px;
-        color: #999;
-        font-size: 1.2rem;
-      }
+.button-view.single {
+  justify-content: flex-end;
+}
 
-      .slide-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
+.carousel-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
 
-      .slide-title {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-        color: #2c3e50;
-      }
+.carousel-button:hover, .carousel-button:focus {
+  background-color: #105395;
+}
 
-      .slide-description {
-        color: #7f8c8d;
-        max-width: 80%;
-        margin: 0 auto;
-      }
+.carousel-button.reset {
+  background-color: #e74c3c;
+}
 
-      .carousel-controls {
-        display: flex;
-        justify-content: space-between;
-        padding: 20px;
-        background-color: #f9f9f9;
-        border-top: 1px solid #eee;
-      }
+.carousel-button.reset:hover, .carousel-button.reset:focus {
+  background-color: #b61200;
+}
 
-      .carousel-button {
-        background-color: #3498db;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        text-decoration: none;
-      }
+.default-step {
+  display: block;
+  visibility: visible;
+}
 
-      .carousel-button:hover {
-        background-color: #2980b9;
-      }
+:target ~ .default-step {
+  display: none;
+  visibility: hidden;
+}
 
-      /* Style for disabled buttons */
-      .carousel-button.disabled {
-        background-color: #bdc3c7;
-        cursor: not-allowed;
-        pointer-events: none;
-      }
+#step1:target ~ .step1,
+#step2:target ~ .step2,
+#step3:target ~ .step3,
+#step4:target ~ .step4,
+#step5:target ~ .step5 {
+  display: block;
+  visibility: visible;
+}
 
-      .carousel-button.reset {
-        background-color: #e74c3c;
-      }
+.indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
-      .carousel-button.reset:hover {
-        background-color: #c0392b;
-      }
+.indicator {
+  width: 12px;
+  height: 12px;
+  background-color: #bdc3c7;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  display: block;
+}
 
-      .indicators {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
+.indicator:hover, .indicator:focus {
+  background-color: #475556;
+}
 
-      .indicator {
-        width: 12px;
-        height: 12px;
-        background-color: #bdc3c7;
-        border-radius: 50%;
-        margin: 0 5px;
-        transition: background-color 0.3s;
-        text-decoration: none;
-        display: block;
-      }
+#step1:target ~ .indicators .indicator[href="#step1"],
+#step2:target ~ .indicators .indicator[href="#step2"],
+#step3:target ~ .indicators .indicator[href="#step3"],
+#step4:target ~ .indicators .indicator[href="#step4"],
+#step5:target ~ .indicators .indicator[href="#step5"],
+#step1:not(:target):not(:focus-within)
+  ~ #step2:not(:target):not(:focus-within)
+  ~ #step3:not(:target):not(:focus-within)
+  ~ #step4:not(:target):not(:focus-within)
+  ~ #step5:not(:target):not(:focus-within)
+  ~ .indicators
+  .indicator[href="#step1"] {
+  background-color: #3498db;
+}
 
-      .indicator:hover {
-        background-color: #95a5a6;
-      }
+hr {
+  width: 100%;
+  border: none;
+  height: 1.5px;
+  background-color: lightgray;
+}
 
-      /* Active indicator styles */
-      #step1:target ~ .indicators .indicator[href="#step1"],
-      #step2:target ~ .indicators .indicator[href="#step2"],
-      #step3:target ~ .indicators .indicator[href="#step3"],
-      #step4:target ~ .indicators .indicator[href="#step4"],
-      #step5:target ~ .indicators .indicator[href="#step5"],
-      #step1:not(:target):not(:focus-within)
-        ~ #step2:not(:target):not(:focus-within)
-        ~ #step3:not(:target):not(:focus-within)
-        ~ #step4:not(:target):not(:focus-within)
-        ~ #step5:not(:target):not(:focus-within)
-        ~ .indicators
-        .indicator[href="#step1"] {
-        background-color: #3498db;
-      }
-
-      /* Navigation buttons logic */
-      /* Disable previous for first slide */
-      #step1:target ~ .carousel-controls .prev,
-      #step1:not(:target):not(:focus-within)
-        ~ #step2:not(:target):not(:focus-within)
-        ~ #step3:not(:target):not(:focus-within)
-        ~ #step4:not(:target):not(:focus-within)
-        ~ #step5:not(:target):not(:focus-within)
-        ~ .carousel-controls
-        .prev {
-        pointer-events: none;
-        background-color: #bdc3c7;
-      }
-
-      /* Show reset instead of next for last slide */
-      #step5:target ~ .carousel-controls .next {
-        display: none;
-      }
-
-      #step5:target ~ .carousel-controls .reset {
-        display: block;
-      }
-
-      /* Hide reset by default */
-      .carousel-controls .reset {
-        display: none;
-      }
+h1,
+p,
+figure {
+  padding: 0px;
+  margin: 0px;
+}
