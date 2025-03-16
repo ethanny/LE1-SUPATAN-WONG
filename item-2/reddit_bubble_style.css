@@ -1,0 +1,156 @@
+
+.thread-dialogue-bubble {
+    position: relative;
+    background-color: #f6f6f6;
+    border: 1px solid #7f7f7f;
+    padding: 5px 5px;
+    max-width: auto;
+    height: auto;
+    
+}
+
+.content {
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-title {
+    margin-bottom: 15px;
+}
+
+.content h3 {
+    color: #472977;
+    font-size: 2vh;
+    margin: 5px;
+    display: inline-block;
+}
+
+.content .link-tag {
+    font-size: 1.5vh;
+    color: #b5b5b5;
+    font-style: normal;
+    font-weight: 50;
+    margin-left: 6px;
+}
+
+.content .link-desc {
+    font-weight: 300;
+    font-size: 10px;
+    color: #9d9d9d;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    display: block;
+    line-height: 0;
+    margin-bottom: 0;
+}
+
+.pointer {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #f6f6f6;
+    border-right: 1px solid #7f7f7f;
+    border-bottom: 1px solid #7f7f7f;
+    bottom: -8px;
+    right: 15px;
+    transform: rotate(45deg);
+}
+
+.post-stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0;
+    margin-top: 0;
+}
+
+.vote-container {
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    padding: 3px;
+    margin: 0;
+    position: relative;
+    width: 300px;
+    width: auto;
+}
+
+
+.score-container {
+    display: flex;
+    align-items: baseline;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.score {
+    display: flex;
+    align-items: flex-start;
+    font-size: 24px;
+    font-weight: bold;
+    color: #9a9a9a;
+    margin-right: 5px;
+}
+
+.points {
+    font-size: 14px;
+    margin-right: 5px;
+
+}
+
+.percentage {
+    font-size: 13px;
+    color: #9a9a9a;
+}
+
+.votes-container {
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 8px;
+}
+
+.upvotes {
+    color: #eb0d0d;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+.downvotes {
+    color: #3368b4;
+    font-size: 13px;
+}
+
+.metadata-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    color: #888;
+    font-size: 12px;
+}
+
+.submission-date {
+    margin-bottom: 2px;
+}
+
+.comments-sort {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.comments {
+    color: #336699;
+    font-weight: bold;
+}
+
+.sort-by {
+    color: #888;
+    font-weight: bold;
+}

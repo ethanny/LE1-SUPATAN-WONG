@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Old Reddit Replica</title>
+  <link rel="stylesheet" href="reddit_bubble_style.css" />
+  <link rel="stylesheet" href="reddit_feed_style.css" />
+</head>
+
+<body>
+  <header>
+    <a href="http://www.reddit.com" class="header-img">
+      <img src="reddit-logo.png" alt="reddit" />
+    </a>
+  </header>
+
+  <div class="user-info">
+    <span class="user-text">
+      <a href="/user/7hundredand77/" class="user-link">7hundredand77</a>,
+      you're back! <a href="/preferences/">preferences</a> |
+      <a href="/logout/">logout</a>? :(
+    </span>
+  </div>
+
+  <div class="user-section">
+    <form action="/search" method="get" class="search-form">
+      <input type="text" name="q" class="search-input" />
+      <button type="submit" class="search-button">🔍</button>
+    </form>
+    <div class="user-buttons">
+      <a href="/message/inbox/" class="mail-button">
+        <img src="https://www.redditstatic.com/mail.png" alt="mail" height="10" width="12" />
+        1 New Msg</a>
+      <a href="/user/7hundredand77/submitted/" class="karma-button">53,211 Link</a>
+      <a href="/user/7hundredand77/comments/" class="comment-button">4,887 Comment</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <iframe src="reddit_left.html"></iframe>
+    <iframe src="reddit_center.html"></iframe>
+    <iframe src="reddit_right.html"></iframe>
+  </div>
+
+</body>
+
+</html>

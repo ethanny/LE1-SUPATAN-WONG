@@ -5,10 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reddit Comment Recreation</title>
     <link rel="stylesheet" href="reddit_right_style.css" />
+    <link rel="stylesheet" href="reddit_bubble_style.css" />
   </head>
   <body>
-    <iframe src="reddit_bubble.html"></iframe>
+    <div class="thread-view">
+      <div class="thread-dialogue-bubble">
+        <div class="content">
+          <div class="content-title">
+            <h3>
+              IAM the guy who created this design AMA<a class="link-tag">(i.imgur.com)</a>
+            </h3>
+            <h3 class="link-desc">
+              https://drive.google.com/file/d/1XcRvdKrEvxYI5gTZmsEDHqjVrR95TqDp/view
+            </h3>
+          </div>
+
+          <div class="post-stats-container">
+            <div class="vote-container">
+              <div class="score-container">
+                <span class="score">232</span>
+                <span class="points">points</span>
+                <span class="percentage">(71% like it)</span>
+              </div>
+              <div class="votes-container">
+                <div class="upvotes">390 up votes</div>
+                <div class="downvotes">158 down votes</div>
+              </div>
+            </div>
+
+            <div class="metadata-container">
+              <div class="submission-date">submitted on 01 Feb 2011</div>
+              <div class="comments-sort">
+                <span class="comments">200 comments</span>
+                <span class="sort-by">sort by</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pointer"></div>
+      </div>
+    </div>
     
+    <div class="thread-container">
     <section class="thread">
       <section class="comment-container">
         <aside class="voting">
@@ -289,5 +327,6 @@
         </section>
       </section>
     </section>
+    </div>
   </body>
 </html>
